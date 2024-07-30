@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    align-items: center;
+}
+h1 {
+    font-size: 1.6em;
+   text-align: center;
+}
+h2 {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.descriptif {
+    font-size:1em;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.slider-text {
+    display: none;
+}
+
+.slider-text.active {
+    display: block;
+}
+
+#imageContainer {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    height: 300px;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    object-fit: cover;
+    transition: left 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    /* Transition plus lente et aisée */
+}
+
+.slider-image.active {
+    left: 0;
+}
+
+.slider-image.prev {
+    left: -100%;
+}
+
+.slider-image.next {
+    left: 100%;
+}
+
+/* Style pour les flèches de navigation */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 0, 0, 0.61);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 50%;
+    line-height: 10px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.rangeBarre {
+    position: relative;
+    width: 100%;
+    margin: 47px 0px 20px;
+    max-width: 600px;
+}
+
+.rangeGraduations {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    /* Ajustez cette valeur selon la hauteur du point par rapport à la barre */
+    width: 100%;
+    pointer-events: none;
+    /* Pour éviter les interférences avec l'input range */
+    transform: translateY(-50%);
+    /* Centrer verticalement */
+    /* max-width: 584px; */
+}
+
+.rangeGraduation {
+    width: 10px;
+    height: 10px;
+    background: #dbdbdb;
+    border-radius: 50%;
+    position: relative;
+}
+
+.current-date {
+    font-size: 1.8em;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#dates {
+    display: none;
+}
+
+#rangeSlider {
+    -webkit-appearance: none;
+    left: -10px;
+    width: 100%;
+    height: 2px;
+    background: #ccc;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .15s ease-in-out;
+    position: relative;
+    top: -4px;
+}
+
+#rangeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #ff0000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    /* Assurez-vous que le curseur est au-dessus des graduations */
+}
+
+#rangeSlider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #ff0000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    /* Assurez-vous que le curseur est au-dessus des graduations */
+}
+
+#textContainer {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+
+/* Au niveau le plus haut du code */
+@media screen and (max-width: 500px) {
+    h2 {
+        font-size: 1em;
+    }
+    .descriptif {
+        font-size: 0.8em;
+    }
+    .current-date {
+        font-size: 1.5em;
+        bottom: 24px;
+     }
+  }
