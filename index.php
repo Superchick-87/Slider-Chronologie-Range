@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <!-- /**
- * width : 650
+ * width : 660
  * height : 585
  */ -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Range Slider avec Images et Dates</title>
+    <title>L'histoire de Sud Ouest</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 

@@ -23,6 +23,7 @@ h2 {
 
 legend {
     font-size: 0.7em;
+    margin-top: 5px;
 }
 
 .descriptif {
@@ -201,6 +202,6 @@ legend {
 
     .current-date {
         font-size: 1.5em;
-        bottom: 24px;
+        bottom: 17px;
     }
 }
