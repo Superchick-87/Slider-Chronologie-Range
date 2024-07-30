@@ -8,10 +8,12 @@ body {
     box-sizing: border-box;
     align-items: center;
 }
+
 h1 {
     font-size: 1.6em;
-   text-align: center;
+    text-align: center;
 }
+
 h2 {
     font-size: 1.4em;
     font-weight: 700;
@@ -19,8 +21,12 @@ h2 {
     margin-top: 0px;
 }
 
+legend {
+    font-size: 0.7em;
+}
+
 .descriptif {
-    font-size:1em;
+    font-size: 1em;
     font-weight: lighter;
     text-align: center;
 }
@@ -188,11 +194,13 @@ h2 {
     h2 {
         font-size: 1em;
     }
+
     .descriptif {
         font-size: 0.8em;
     }
+
     .current-date {
         font-size: 1.5em;
         bottom: 24px;
-     }
-  }
+    }
+}

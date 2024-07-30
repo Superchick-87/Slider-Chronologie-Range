@@ -4,6 +4,7 @@
  * width : 650
  * height : 585
  */ -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
 </head>
 
 <body>
-    <img src="images/brand.jpg" alt="brand">
+    <!-- <img src="images/brand.jpg" alt="brand"> -->
     <h1>L'histoire de Sud Ouest</h1>
     <?php
     // Chemin vers le fichier CSV
@@ -40,10 +41,10 @@
             $class = ($index == 0) ? 'slider-image active' : 'slider-image';
             echo '<img src="images/' . $data[3] . '" class="' . $class . '" alt="' . $data[0] . '" data-date="' . $data[0] . '">';
         }
-        
+
         echo '<button class="arrow right" id="next"><b>&#9654;</b></button>';
         echo '</div>';
-        echo '<legend><i>&copy; archives Sud Ouest</i></legend>';
+        echo '<legend><i>&copy; Archives Sud Ouest</i></legend>';
 
         // Génération de la barre de défilement
         echo '<div class="rangeBarre">';
